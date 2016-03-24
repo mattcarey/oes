@@ -8,25 +8,6 @@ nav, section {
     display: block
 }
 
-@font-face {
-    font-family: 'SeroScWebPro-Medium';
-    src: url("fonts/SeroScWebPro-Medium.eot")
-}
-
-@font-face {
-    font-family: 'SeroScWebPro-Medium';
-    src: url("fonts/SeroScWebPro-Medium.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'SeroWebPro-Medium';
-    src: url("fonts/SeroWebPro-Medium.eot")
-}
-
-@font-face {
-    font-family: 'SeroWebPro-Medium';
-    src: url("fonts/SeroWebPro-Medium.woff") format("woff")
-}
 
 html {
     font-size: 100%;
@@ -37,7 +18,7 @@ html {
 }
 
 body, input, button, textarea {
-    font-family: Georgia, Serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-size: 14px;
     font-size: 1.4rem;
     color: #333
@@ -48,19 +29,19 @@ body, p, li {
 }
 
 body {
-    background: #f3f4f6 url(img/bg.png) top center
+    background: rgb(77,77,77);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    color: #969696
+    color: rgb(0,146,69)
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-    color: #007b99
+    color: rgb(0,146,69)
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
@@ -128,7 +109,7 @@ h3, h4, h5, h6 {
 }
 
 a {
-    color: #333
+    color: rgb(0,146,69)
 }
 
 a:hover {
@@ -222,9 +203,10 @@ textarea {
 }
 
 .header {
-    border-bottom: 1px solid #b2b2b2;
+    border-bottom: 1px solid rgb(0,146,69);
     margin: 0 0 20px;
-    padding: 10px 0 20px
+    padding: 10px 0 20px;
+    color: #fff
 }
 
 .header .logo {
@@ -241,7 +223,7 @@ textarea {
 }
 
 .nav {
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
@@ -270,7 +252,7 @@ textarea {
 .mobile-nav {
     display: none;
     clear: both;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 16px
@@ -348,7 +330,7 @@ textarea {
 
 .main-wrap {
     position: relative;
-    background-color: #fff
+    background-color: rgb(102,102,102)
 }
 
 .main {
@@ -382,7 +364,7 @@ textarea {
     right: 0;
     width: 35.9%;
     height: 100%;
-    background-color: #ededec
+    background-color: rgb(128,128,128)
 }
 
 .entry-title {
@@ -420,7 +402,7 @@ textarea {
 
 .home-news li span {
     font-size: 11px;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696;
@@ -491,7 +473,7 @@ textarea {
 
 .project-info li b {
     display: block;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696
@@ -539,7 +521,7 @@ textarea {
 
 .summary .date {
     margin: -5px 0 10px;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696;
@@ -574,7 +556,7 @@ textarea {
 
 .cat-entry-list .date {
     font-size: 11px;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696;
@@ -611,7 +593,7 @@ textarea {
 }
 
 .social p {
-    font-family: 'SeroScWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 10px;
