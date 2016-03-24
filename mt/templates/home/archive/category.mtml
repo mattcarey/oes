@@ -1,0 +1,72 @@
+<?php
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/bootstrap.php");
+
+  $meta = (object)array(
+    'title' => '<mt:If tag="CategoryDataMetaTitle"><$mt:CategoryDataMetaTitle encode_php="q"$><mt:Else><$mt:CategoryLabel encode_php="q"$></mt:If>',
+    'description' => '<$mt:CategoryDataMetaDescription encode_php="q"$>',
+    'keywords' => '<$mt:CategoryDataMetaKeywords encode_php="q"$>'
+  );
+
+  $body_class = 'cat-' . '<$mt:CategoryBasename separator="-" encode_php="q"$>';
+
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/header.php");
+?>
+
+<$mt:Var name="has_intro" value="false"$>
+<mt:Entries tags="@intro" limit="1">
+  <$mt:Var name="has_intro" value="true"$>
+</mt:Entries>
+
+<div class="main-wrap cf">
+  <div class="faux-sidebar"></div>
+
+  <div class="main cf">
+    <mt:If tag="CategoryDataImg">
+      <div class="intro-image cf">
+        <div class="chop">
+          <img src="<mt:CategoryDataImgAsset><$mt:AssetThumbnailURL width="496"$></mt:CategoryDataImgAsset>" alt="<$mt:CategoryDataAltText$>" />
+        </div>
+      </div>
+    </mt:If>
+
+    <div class="inner cf">
+      <mt:If name="has_intro" eq="false">
+        <h1 class="cat-title"><$mt:CategoryLabel$></h1>
+      </mt:If>
+
+      <mt:Entries tags="@intro" limit="1">
+        <h1 class="cat-title"><$mt:EntryTitle$></h1>
+
+        <div class="format">
+          <$mt:EntryBody$>
+        </div>
+      </mt:Entries>
+
+      <mt:If tag="CategoryDataShowListing">
+        <mt:If tag="CategoryLabel" like="/^news/i">
+          <mt:Entries tags="NOT @intro">
+            <$mt:Include module="Summary" parent="1"$>
+          </mt:Entries>
+        <mt:Else>
+          <mt:Entries tags="NOT @intro" limit="10">
+            <$mt:Include module="Summary" parent="1"$>
+          </mt:Entries>
+        </mt:If>
+      </mt:If>
+
+      <mt:If tag="CategoryLabel" like="/news/i">
+        <a href="archive.php">Archive</a>
+      </mt:If>
+    </div>
+  </div>
+
+  <div class="sidebar cf">
+    <div class="inner cf">
+      <$mt:Include module="CategoryEntryList" parent="1"$>
+    </div>
+  </div>
+
+  <?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/social.php"); ?>
+</div>
+
+<?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/footer.php"); ?>

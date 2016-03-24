@@ -1,0 +1,51 @@
+<?php
+
+  # Environment
+  switch ($_SERVER['SERVER_NAME']) {
+    case 'dev.axisgroupuk.com':
+      $env = 'staging';
+      break;
+    case 'axisgroupuk.com':
+      $env = 'production';
+      break;
+    default:
+      $env = 'development';
+  }
+
+  # Default meta object
+  $meta = (object)array(
+    'title' => '',
+    'description' => '',
+    'keywords' => ''
+  );
+
+  # MD5 Hash of the file for query string version number
+  function md5Hash($path){
+    $v = "";
+
+    if (file_exists($path))
+      $v = md5_file($path);
+
+    return $v;
+  }
+
+  # URL and URL segments
+  $url = $_SERVER['REQUEST_URI'];
+  $seg = explode('/', $url);
+
+  if (isset($seg[1]) && $seg[1] == "dev") {
+    unset($seg[1]);
+
+    $seg = array_values($seg);
+  }
+
+  # Image path
+  $image_path = '/_/img/';
+
+  function svgFile($file) {
+    if (file_exists($file)) {
+      return file_get_contents($file);
+    }
+  }
+
+?>

@@ -1,0 +1,36 @@
+<mt:If tag="CategoryLabel" like="/news/i">
+  <?php
+    include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/bootstrap.php");
+
+    $meta = (object)array(
+      'title' => '<mt:If tag="CategoryDataMetaTitle"><$mt:CategoryDataMetaTitle encode_php="q"$><mt:Else><$mt:CategoryLabel encode_php="q"$></mt:If>',
+      'description' => '<$mt:CategoryDataMetaDescription encode_php="q"$>',
+      'keywords' => '<$mt:CategoryDataMetaKeywords encode_php="q"$>'
+    );
+
+    include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/header.php");
+  ?>
+
+  <div class="main-wrap cf">
+    <div class="faux-sidebar"></div>
+
+    <div class="main cf">
+      <div class="inner cf">
+        <ul>
+          <mt:Entries unique="1" tags="NOT @intro" limit="1000">
+            <li><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a></li>
+          </mt:Entries>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar cf">
+      <div class="inner cf">
+      </div>
+    </div>
+
+    <?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/social.php"); ?>
+  </div>
+
+  <?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/footer.php"); ?>
+</mt:If>

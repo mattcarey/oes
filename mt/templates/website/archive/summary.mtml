@@ -1,0 +1,28 @@
+<div class="summary <mt:If tag="EntryDataImg">has-image</mt:If> cf">
+  <mt:If tag="EntryDataImg">
+    <mt:EntryDataImgAsset>
+      <img src="<$mt:AssetThumbnailURL width="100"$>" alt="" />
+    </mt:EntryDataImgAsset>
+  </mt:If>
+
+  <div class="info cf">
+    <h3><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a></h3>
+
+    <mt:If tag="EntryCategory" like="/news/i">
+      <p class="date"><$mt:EntryDate format="%e %b %Y"$></p>
+    </mt:If>
+
+    <$mt:Var name="more_text" value="Find out more"$>
+
+    <mt:EntryPrimaryCategory>
+      <mt:If tag="CategoryDataMoreText">
+        <$mt:CategoryDataMoreText SetVar="more_text"$>
+      </mt:If>
+    </mt:EntryPrimaryCategory>
+
+    <p>
+      <$mt:EntryExcerpt no_generate="1"$>
+      <br /><a href="<$mt:EntryPermalink$>"><$mt:Var name="more_text"$></a>
+    </p>
+  </div>
+</div>
