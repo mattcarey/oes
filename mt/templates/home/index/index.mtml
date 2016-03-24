@@ -1,0 +1,73 @@
+<?php
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/bootstrap.php");
+
+  $meta = (object)array(
+    'title' => '',
+    'description' => '',
+    'keywords' => ''
+  );
+
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/header.php");
+?>
+
+<mt:Entries category="HID Homepage" limit="1">
+  <mt:EntryPrimaryCategory>
+    <mt:If tag="CategoryDataImg">
+      <div class="top cf">
+        <div class="chop">
+          <img src="<mt:CategoryDataImgAsset><$mt:AssetThumbnailURL width="758"$></mt:CategoryDataImgAsset>" alt="" />
+        </div>
+      </div>
+    </mt:If>
+  </mt:EntryPrimaryCategory>
+</mt:Entries>
+
+<div class="main-wrap cf">
+  <div class="faux-sidebar"></div>
+
+  <div class="main cf">
+    <div class="inner cf">
+      <mt:Entries category="HID Homepage" limit="1">
+        <h1 class="home-title"><$mt:EntryTitle$></h1>
+
+        <div class="format">
+          <$mt:EntryBody$>
+        </div>
+      </mt:Entries>
+
+      <$mt:Var name="home_project_featured" value="false"$>
+      <mt:Entries category="Projects" field:entry_home_featured="1"><$mt:Var name="home_project_featured" value="true"$></mt:Entries>
+
+      <mt:If name="home_project_featured" eq="true">
+        <div class="home-featured-project cf">
+          <h2>Featured project</h2>
+
+          <mt:Entries category="Projects" field:entry_home_featured="1">
+            <$mt:Include module="Summary" parent="1"$>
+          </mt:Entries>
+        </div>
+      </mt:If>
+    </div>
+  </div>
+
+  <div class="sidebar cf">
+    <div class="inner cf">
+      <div class="home-news cf">
+        <h2>Axis news</h2>
+
+        <ul>
+          <mt:Entries category="News" limit="3">
+            <li>
+              <a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a><br />
+              <span><$mt:EntryDate format="%e %b %Y"$></span>
+            </li>
+          </mt:Entries>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/social.php"); ?>
+</div>
+
+<?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/footer.php"); ?>

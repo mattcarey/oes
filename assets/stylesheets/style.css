@@ -1,0 +1,693 @@
+html, body, ul, ol, li, figure {
+    padding: 0;
+    margin: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+nav, section {
+    display: block
+}
+
+@font-face {
+    font-family: 'SeroScWebPro-Medium';
+    src: url("fonts/SeroScWebPro-Medium.eot")
+}
+
+@font-face {
+    font-family: 'SeroScWebPro-Medium';
+    src: url("fonts/SeroScWebPro-Medium.woff") format("woff")
+}
+
+@font-face {
+    font-family: 'SeroWebPro-Medium';
+    src: url("fonts/SeroWebPro-Medium.eot")
+}
+
+@font-face {
+    font-family: 'SeroWebPro-Medium';
+    src: url("fonts/SeroWebPro-Medium.woff") format("woff")
+}
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 62.5%
+}
+
+body, input, button, textarea {
+    font-family: Georgia, Serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #333
+}
+
+body, p, li {
+    line-height: 1.45em
+}
+
+body {
+    background: #f3f4f6 url(img/bg.png) top center
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #969696
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none;
+    color: #007b99
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    color: #005266
+}
+
+h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.1em
+}
+
+h2 {
+    font-size: 20px;
+    font-size: 2.0rem;
+    line-height: 1.2em
+}
+
+h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.2em
+}
+
+h4 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.2em
+}
+
+h5 {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.2em
+}
+
+h6 {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.2em
+}
+
+h1 {
+    margin: 0 0 15px
+}
+
+h2 {
+    margin: 17px 0 2px
+}
+
+h3, h4, h5, h6 {
+    margin: 0 0 7px
+}
+
+.svg-item {
+    display: none
+}
+
+.svg .svg-item {
+    display: inline
+}
+
+.svg .svg-replacement {
+    display: none
+}
+
+a {
+    color: #333
+}
+
+a:hover {
+    color: #007b99
+}
+
+p, table, form {
+    margin: 0 0 15px
+}
+
+ul, ol {
+    margin: 0 0 15px 15px
+}
+
+blockquote {
+    padding: 0 0 0 10px;
+    font-style: italic;
+    border-left: 2px dashed #ccc;
+    color: #333
+}
+
+img {
+    max-width: 100%;
+    margin: 0;
+    line-height: 1;
+    border: none
+}
+
+.ie6 img {
+    width: 100%
+}
+
+iframe {
+    max-width: 100%
+}
+
+hr {
+    margin: 20px 0
+}
+
+.cf:before, .cf:after {
+    content: "";
+    display: table
+}
+
+.cf:after {
+    clear: both
+}
+
+.cf {
+    zoom: 1
+}
+
+.field {
+    margin: 0 0 10px
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+
+.msg.error {
+    background: #ffc8c8;
+    color: #f00;
+    border-color: #ff9696
+}
+
+.msg.warning {
+    background: #ffe1c8;
+    color: #ff6400;
+    border-color: #ffc896
+}
+
+.msg.success {
+    background: #dceace;
+    color: #5d8237;
+    border-color: #a9cc86
+}
+
+.wrap {
+    width: auto;
+    max-width: 758px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px
+}
+
+.ie8 .wrap, .ie7 .wrap, .ie6 .wrap {
+    width: 758px
+}
+
+.header {
+    border-bottom: 1px solid #b2b2b2;
+    margin: 0 0 20px;
+    padding: 10px 0 20px
+}
+
+.header .logo {
+    float: left;
+    margin: 0 40px 0 0
+}
+
+.header .logo img {
+    max-width: none
+}
+
+.header .logo svg:hover .grey {
+    fill: #96999C
+}
+
+.nav {
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    margin: 45px 0 0
+}
+
+.nav ul {
+    margin: 0
+}
+
+.nav li {
+    display: inline;
+    margin: 0 15px 0 0
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 0 0 2px 2px
+}
+
+.nav .on a {
+    color: #007b99;
+    border-bottom: 2px solid #007b99
+}
+
+.mobile-nav {
+    display: none;
+    clear: both;
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px
+}
+
+.mobile-nav a {
+    text-decoration: none
+}
+
+.mobile-nav .current {
+    margin: 0 0 15px
+}
+
+.mobile-nav .current .label {
+    display: inline-block;
+    min-width: 40%;
+    margin-right: 10px
+}
+
+.mobile-nav .current .label a {
+    color: #007b99;
+    border-bottom: 2px solid #007b99
+}
+
+.mobile-nav .current .toggle {
+    display: inline-block;
+    color: #969696;
+    cursor: pointer
+}
+
+.mobile-nav .list a {
+    display: block;
+    margin: 8px 0
+}
+
+.top {
+    padding-bottom: 25%;
+    background-size: 100%;
+    position: relative
+}
+
+.top .chop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.top img {
+    display: block;
+    max-width: 100%
+}
+
+.intro-image {
+    padding-bottom: 40%;
+    width: 103.7%;
+    position: relative
+}
+
+.intro-image .chop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.intro-image img {
+    display: block;
+    width: 100%
+}
+
+.main-wrap {
+    position: relative;
+    background-color: #fff
+}
+
+.main {
+    width: 64.1%;
+    float: left;
+    position: relative
+}
+
+.main .inner {
+    padding: 20px
+}
+
+.main h1 {
+    color: #007b99
+}
+
+.sidebar {
+    width: 35.9%;
+    float: right;
+    position: relative;
+    z-index: 10
+}
+
+.sidebar .inner {
+    padding: 25px 20px 20px 40px
+}
+
+.faux-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35.9%;
+    height: 100%;
+    background-color: #ededec
+}
+
+.entry-title {
+    font-size: 28px;
+    margin: 0 0 25px
+}
+
+.entry-job-title {
+    margin: -25px 0 25px
+}
+
+.cat-title {
+    font-size: 28px;
+    margin: 0 0 35px
+}
+
+.home-title {
+    font-size: 22px;
+    margin: 0 0 15px
+}
+
+.home-news h2 {
+    font-size: 18px;
+    margin: 0 0 10px
+}
+
+.home-news ul {
+    margin: 0 0 20px;
+    list-style: none
+}
+
+.home-news li {
+    margin: 0 0 7px
+}
+
+.home-news li span {
+    font-size: 11px;
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #969696;
+    font-weight: normal
+}
+
+.home-featured-project {
+    margin: 50px 0 0
+}
+
+.home-featured-project h2 {
+    margin: 0 0 7px;
+    font-size: 16px;
+    color: #969696
+}
+
+.home-featured-project .summary h3 a {
+    color: #007b99
+}
+
+.home-featured-project .summary h3 a:hover {
+    color: #333
+}
+
+.home-featured-project .summary + .summary {
+    border: none
+}
+
+.content img {
+    max-width: 100%;
+    display: block;
+    margin: 0 0 15px;
+    height: auto !important
+}
+
+.mt-image-none {
+    float: none !important;
+    margin: 0 0 15px !important
+}
+
+.mt-image-left {
+    float: left !important;
+    margin: 3px 15px 15px 0 !important
+}
+
+.mt-image-right {
+    float: right !important;
+    margin: 3px 0 15px 15px !important
+}
+
+.project-info {
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+    margin: 0 0 20px;
+    padding: 7px 0
+}
+
+.project-info ul {
+    margin: 0
+}
+
+.project-info li {
+    width: 49%;
+    display: inline-block;
+    margin: 7px 0;
+    vertical-align: top
+}
+
+.project-info li b {
+    display: block;
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #969696
+}
+
+.project-info li i {
+    display: block;
+    font-style: normal
+}
+
+.ie6 .project-info li, .ie7 .project-info li {
+    display: inline
+}
+
+.main .project-title {
+    font-size: 20px;
+    color: #969696;
+    margin: 0 0 8px;
+    color: #969696
+}
+
+.entry-image {
+    margin: 0 0 10px
+}
+
+.summary {
+    border-top: 1px solid #b2b2b2;
+    margin: 0 0 10px;
+    padding-top: 10px
+}
+
+.summary img {
+    float: left;
+    margin-top: 2px
+}
+
+.summary.has-image .info {
+    margin-left: 110px
+}
+
+.summary h3 {
+    font-size: 22px;
+    margin: 0 0 5px
+}
+
+.summary .date {
+    margin: -5px 0 10px;
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #969696;
+    font-size: 12px;
+    font-weight: normal
+}
+
+.cat-news .summary {
+    border-top: 1px solid #b2b2b2;
+    margin: 0 0 10px;
+    padding-top: 10px
+}
+
+.cat-entry-list h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333
+}
+
+.cat-entry-list ul {
+    list-style: none;
+    margin: 0 0 80px
+}
+
+.cat-entry-list li {
+    margin: 0 0 7px
+}
+
+.cat-entry-list .on a {
+    color: #007b99
+}
+
+.cat-entry-list .date {
+    font-size: 11px;
+    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #969696;
+    font-weight: normal
+}
+
+.social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35.9%;
+    height: 100%
+}
+
+.social .inner {
+    position: absolute;
+    bottom: 25px;
+    left: 40px;
+    z-index: 10
+}
+
+.social a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px
+}
+
+.social svg:hover .grey {
+    fill: #007b99
+}
+
+.social img {
+    max-width: none
+}
+
+.social p {
+    font-family: 'SeroScWebPro-Medium', sans-serif;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #969696;
+    margin: 0 0 13px
+}
+
+.footer {
+    padding: 20px;
+    color: #969696
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        padding: 20px 0
+    }
+
+    .header .logo {
+        margin: 0 0 20px
+    }
+
+    .main {
+        width: auto;
+        float: none
+    }
+
+    .sidebar {
+        width: auto;
+        float: none;
+        background-color: #ededec
+    }
+
+    .sidebar .inner {
+        padding: 20px
+    }
+
+    .faux-sidebar {
+        display: none
+    }
+
+    .intro-image {
+        width: 100%
+    }
+
+    .social {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        background-color: #ededec
+    }
+
+    .social .inner {
+        position: static
+    }
+
+    .js .nav {
+        display: none
+    }
+
+    .js .mobile-nav {
+        display: block
+    }
+
+    .summary img {
+        width: 70px;
+        height: auto
+    }
+
+    .summary .info {
+        margin-left: 80px
+    }
+
+    .summary h3 {
+        font-size: 20px;
+        margin: 0 0 5px
+    }
+}

@@ -1,0 +1,63 @@
+<?php
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/bootstrap.php");
+
+  $meta = (object)array(
+    'title' => '<mt:If tag="EntryDataMetaTitle"><$mt:EntryDataMetaTitle encode_php="q"$><mt:Else><$mt:EntryTitle encode_php="q"$></mt:If>',
+    'description' => '<$mt:EntryDataMetaDescription encode_php="q"$>',
+    'keywords' => '<$mt:EntryKeywords encode_php="q"$>'
+  );
+
+  <mt:If tag="EntryCategory">
+    $meta->title .= ' | <$mt:EntryCategory encode_php="q"$>';
+  </mt:If>
+
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/header.php");
+?>
+
+<$mt:EntryPermalink SetVar="current_entry_url"$>
+
+<div class="main-wrap cf">
+  <div class="faux-sidebar"></div>
+
+  <div class="main cf">
+    <div class="inner cf">
+      <h1 class="entry-title"><$mt:EntryTitle$></h1>
+
+      <mt:If tag="EntryCategory" like="/people/i">
+        <mt:If tag="EntryDataJobTitle">
+          <h2 class="entry-job-title"><$mt:EntryDataJobTitle$></h2>
+        </mt:If>
+      </mt:If>
+
+      <mt:If tag="EntryCategory" like="/(projects|locations)/i">
+        <div class="project-info cf">
+          <$mt:EntryMore$>
+        </div>
+      </mt:If>
+
+      <mt:If tag="EntryDataImg">
+        <img class="entry-image" src="<mt:EntryDataImgAsset><$mt:AssetThumbnailURL width="446"$></mt:EntryDataImgAsset>" alt="<$mt:EntryDataAltText$>" />
+      </mt:If>
+
+      <mt:If tag="EntryCategory" like="/projects/i">
+        <h2 class="project-title">The project</h2>
+      </mt:If>
+
+      <div class="format">
+        <$mt:EntryBody$>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar cf">
+    <div class="inner cf">
+      <mt:EntryPrimaryCategory>
+        <$mt:Include module="CategoryEntryList" parent="1"$>
+      </mt:EntryPrimaryCategory>
+    </div>
+  </div>
+
+  <?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/social.php"); ?>
+</div>
+
+<?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/footer.php"); ?>

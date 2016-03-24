@@ -1,0 +1,84 @@
+<mt:SetVarTemplate name="cat">
+  (object)array(
+    'title' => '<$mt:CategoryLabel encode_php="q"$>',
+    'url' => '<$mt:CategoryArchiveLink encode_php="q"$>',
+    'basename' => '<$mt:CategoryBasename separator="-" encode_php="q"$>',
+    'subcats' => array(
+      <mt:SubCategories>
+        <mt:Unless tag="CategoryLabel" like="/^HID /">
+          <$mt:Var name="cat"$>
+        </mt:Unless>
+      </mt:SubCategories>
+    )
+  ),
+</mt:SetVarTemplate>
+
+<?php
+  $cats = array(
+    <mt:TopLevelCategories>
+      <mt:Unless tag="CategoryLabel" like="/^HID /">
+        <$mt:Var name="cat"$>
+      </mt:Unless>
+    </mt:TopLevelCategories>
+  );
+
+  function catOutput($seg, $cats = array(), $n = 0) { ?>
+    <?php
+      if (empty($cats))
+        return;
+    ?>
+
+    <ul>
+      <?php foreach ($cats as $c) { ?>
+        <li class="<?php if (isset($seg[$n + 1]) && $c->basename == $seg[$n + 1]) { echo "on"; } ?>">
+          <a href="<?php echo $c->url; ?>">
+            <?php echo $c->title; ?>
+          </a>
+
+          <?php catOutput($seg, $c->subcats, $n + 1); ?>
+        </li>
+      <?php } ?>
+    </ul>
+  <?php }
+
+  $mobile_current = false;
+  $mobile_list = array();
+
+  foreach($cats as $c) {
+    if (isset($seg[1]) && $c->basename == $seg[1]) {
+      $mobile_current = $c;
+    } else {
+      $mobile_list[] = $c;
+    }
+  }
+?>
+
+<nav class="nav">
+  <?php catOutput($seg, $cats); ?>
+</nav>
+
+<div class="mobile-nav cf"><!--
+  <div class="current cf">
+    <div class="label">
+      <?php if ($mobile_current) { ?>
+        <a href="<?php echo $mobile_current->url; ?>">
+          <?php echo $mobile_current->title; ?>
+        </a>
+      <?php } else { ?>
+        <span>Menu</span>
+      <?php } ?>
+    </div>
+
+    <div class="toggle">
+      More +
+    </div>
+  </div>
+
+  <div class="list">
+    <?php foreach($mobile_list as $item) { ?>
+      <a href="<?php echo $item->url; ?>">
+        <?php echo $item->title; ?>
+      </a>
+    <?php } ?>
+  </div>
+--></div>

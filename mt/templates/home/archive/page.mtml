@@ -1,0 +1,38 @@
+<?php
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/bootstrap.php");
+
+  $meta = (object)array(
+    'title' => '<mt:If tag="PageDataMetaTitle"><$mt:PageDataMetaTitle encode_php="q"$><mt:Else><$mt:PageTitle encode_php="q"$></mt:If>',
+    'description' => '<$mt:PageDataMetaDescription encode_php="q"$>',
+    'keywords' => '<$mt:PageKeywords encode_php="q"$>'
+  );
+
+  include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/header.php");
+?>
+
+<div class="main-wrap cf">
+  <div class="faux-sidebar"></div>
+
+  <div class="main cf">
+    <div class="inner cf">
+      <h1 class="entry-title"><$mt:PageTitle$></h1>
+
+      <mt:If tag="PageDataImg">
+        <img class="entry-image" src="<mt:PageDataImgAsset><$mt:AssetThumbnailURL width="446"$></mt:PageDataImgAsset>" alt="<$mt:PageDataAltText$>" />
+      </mt:If>
+
+      <div class="format">
+        <$mt:PageBody$>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar cf">
+    <div class="inner cf">
+    </div>
+  </div>
+
+  <?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/social.php"); ?>
+</div>
+
+<?php include_once("<mt:BlogParentWebsite><$mt:WebsitePath$></mt:BlogParentWebsite>inc/footer.php"); ?>

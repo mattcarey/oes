@@ -1,0 +1,53 @@
+<mt:SetVarTemplate name="sidebar_item">
+  <$mt:Var name="klass" value=""$>
+
+  <mt:If tag="EntryPermalink" eq="$current_entry_url">
+    <$mt:Var name="klass" value="on"$>
+  </mt:If>
+
+  <li class="<$mt:Var name="klass"$>">
+    <a href="<$mt:EntryPermalink$>">
+      <$mt:EntryTitle$>
+    </a>
+
+    <mt:If tag="EntryCategory" like="/people/i">
+      <mt:If tag="EntryDataJobTitle">
+        <br /><$mt:EntryDataJobTitle$>
+      </mt:If>
+    </mt:If>
+
+    <mt:If tag="EntryCategory" like="/news/i"><br />
+      <span class="date"><$mt:EntryDate format="%e %b %Y"$></span>
+    </mt:If>
+  </li>
+</mt:SetVarTemplate>
+
+<?php $entry_count = 0; ?>
+
+<?php
+  <mt:EntriesWithSubCategories tags="NOT @intro" limit="3">
+    $entry_count++;
+  </mt:EntriesWithSubCategories>
+?>
+
+<div class="cat-entry-list cf">
+  <?php if ($entry_count > 0) { ?>
+    <mt:If tag="CategoryDataSidebarTitle">
+      <h2><$mt:CategoryDataSidebarTitle$></h2>
+    <mt:Else>
+      <h2>All <$mt:CategoryLabel$></h2>
+    </mt:If>
+  <?php } ?>
+
+  <ul>
+    <mt:If tag="EntryCategory" like="/^news/i">
+      <mt:EntriesWithSubCategories tags="NOT @intro" limit="10">
+        <$mt:Var name="sidebar_item"$>
+      </mt:EntriesWithSubCategories>
+    <mt:Else>
+      <mt:EntriesWithSubCategories tags="NOT @intro">
+        <$mt:Var name="sidebar_item"$>
+      </mt:EntriesWithSubCategories>
+    </mt:If>
+  </ul>
+</div>

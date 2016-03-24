@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]><html lang="en" class="ie6 no-js" debug="true"><![endif]-->
+<!--[if IE 7]><html lang="en" class="ie7 no-js"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie8 no-js"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+
+  <title><?php if (isset($meta->title) && !empty($meta->title)) { echo $meta->title . " | "; } ?>Axis Group</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="<?php if (isset($meta->description) && !empty($meta->description)) { echo $meta->description; } ?>" />
+  <meta name="keywords" content="<?php if (isset($meta->keywords) && !empty($meta->keywords)) { echo $meta->keywords; } ?>" />
+
+  <script src="<$mt:BlogRelativeURL$>_/modernizr.js?v=<?php echo md5Hash('<$mt:WebsitePath$>_/modernizr.js'); ?>"></script>
+
+  <link rel="stylesheet" href="<$mt:BlogRelativeURL$>_/style.css?v=<?php echo md5Hash('<$mt:WebsitePath$>_/style.css'); ?>" media="all">
+  <link rel="stylesheet" href="<$mt:BlogRelativeURL$>_/print.css?v=<?php echo md5Hash('<$mt:WebsitePath$>_/print.css'); ?>" media="print">
+
+  <script>
+    Modernizr.load([
+      '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+      '<$mt:BlogRelativeURL$>_/scripts.js?v=<?php echo md5Hash("<$mt:WebsitePath$>_/scripts.js"); ?>'
+    ]);
+  </script>
+
+  <script type="text/javascript" src="//use.typekit.net/pig1ojd.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <?php if ($env == 'production') { ?>
+    <?php include_once("<$mt:WebsitePath$>inc/google_analytics.php"); ?>
+  <?php } ?>
+</head>
+
+<body class="<?php if (isset($body_class)) { echo "$body_class"; } ?>">
+  <header class="header cf">
+    <div class="wrap cf">
+      <a href="/" class="logo">
+        <img class="svg-replacement" src="<?php echo $image_path ?>axis-logo.png" width="105" height="93" alt="#" />
+
+        <!--[if gt IE 8]><!-->
+          <span class="svg-item">
+            <?php echo svgFile("<$mt:WebsitePath$>_/img/axis-logo.svg"); ?>
+          </span>
+        <!--<![endif]-->
+      </a>
+
+      <?php include_once("<$mt:WebsitePath$>inc/nav.php"); ?>
+    </div>
+  </header>
+
+  <div>
+    <div class="wrap">
