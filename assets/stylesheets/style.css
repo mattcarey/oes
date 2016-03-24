@@ -21,7 +21,7 @@ body, input, button, textarea {
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 14px;
     font-size: 1.4rem;
-    color: #333
+    color: #fff
 }
 
 body, p, li {
@@ -36,12 +36,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    color: rgb(0,146,69)
+    color: #ffffff;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-    color: rgb(0,146,69)
+    color: ffffff;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
@@ -105,11 +105,12 @@ h3, h4, h5, h6 {
 }
 
 .svg .svg-replacement {
-    display: none
+/*    display: none */
 }
 
 a {
-    color: rgb(0,146,69)
+    color: #fff;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -203,10 +204,11 @@ textarea {
 }
 
 .header {
-    border-bottom: 1px solid rgb(0,146,69);
-    margin: 0 0 20px;
-    padding: 10px 0 20px;
-    color: #fff
+    border-bottom: 3px solid rgb(0,146,69);
+    margin: 0;
+    padding: 10px 0 0px;
+    color: #fff;
+    background-color: #fff
 }
 
 .header .logo {
@@ -241,12 +243,17 @@ textarea {
 
 .nav a {
     text-decoration: none;
-    padding: 0 0 2px 2px
+    padding: 0 0 2px 2px;
+    color: rgb(0,146,64);
+}
+
+.nav a:hover {
+  color: #000
 }
 
 .nav .on a {
-    color: #007b99;
-    border-bottom: 2px solid #007b99
+    color: rgb(0,146,64);
+    border-bottom: 2px solid rgb(0,146,64)
 }
 
 .mobile-nav {
@@ -344,7 +351,7 @@ textarea {
 }
 
 .main h1 {
-    color: #007b99
+    color: #fff
 }
 
 .sidebar {
