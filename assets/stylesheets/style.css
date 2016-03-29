@@ -595,6 +595,11 @@ textarea {
     fill: #007b99
 }
 
+.social .svg-replacement 
+{
+display: none
+}
+
 .social img {
     max-width: none
 }
