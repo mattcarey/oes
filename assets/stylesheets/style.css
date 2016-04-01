@@ -292,7 +292,8 @@ textarea {
 
 .mobile-nav .list a {
     display: block;
-    margin: 8px 0
+    margin: 8px 0;
+    color: rgb(0,146,69);
 }
 
 .top {
