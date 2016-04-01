@@ -41,11 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-    color: ffffff;
+    color: #ffffff;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    color: #005266
+    color: rgb(200,200,200)
 }
 
 h1 {
@@ -114,7 +114,7 @@ a {
 }
 
 a:hover {
-    color: #007b99
+    color: rgb(200,200,200);
 }
 
 p, table, form {
@@ -244,7 +244,7 @@ textarea {
 .nav a {
     text-decoration: none;
     padding: 0 0 2px 2px;
-    color: rgb(0,146,64);
+    color: rgb(0,146,69);
 }
 
 .nav a:hover {
@@ -252,8 +252,8 @@ textarea {
 }
 
 .nav .on a {
-    color: rgb(0,146,64);
-    border-bottom: 2px solid rgb(0,146,64)
+    color: rgb(0,146,69);
+    border-bottom: 2px solid rgb(0,146,69)
 }
 
 .mobile-nav {
@@ -280,8 +280,8 @@ textarea {
 }
 
 .mobile-nav .current .label a {
-    color: #007b99;
-    border-bottom: 2px solid #007b99
+    color: rgb(0,146,69);
+    border-bottom: 2px solid rgb(0,146,69)
 }
 
 .mobile-nav .current .toggle {
@@ -427,7 +427,7 @@ textarea {
 }
 
 .home-featured-project .summary h3 a {
-    color: #007b99
+    color: #ffffff
 }
 
 .home-featured-project .summary h3 a:hover {
@@ -497,9 +497,8 @@ textarea {
 
 .main .project-title {
     font-size: 20px;
-    color: #969696;
+    color: #ffffff;
     margin: 0 0 8px;
-    color: #969696
 }
 
 .entry-image {
@@ -558,7 +557,7 @@ textarea {
 }
 
 .cat-entry-list .on a {
-    color: #007b99
+    color: #ffffff
 }
 
 .cat-entry-list .date {
@@ -592,10 +591,10 @@ textarea {
 }
 
 .social svg:hover .grey {
-    fill: #007b99
+    fill: #ffffff
 }
 
-.social .svg-replacement 
+.social .svg-replacement
 {
 display: none
 }
