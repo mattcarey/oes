@@ -8,25 +8,6 @@ nav, section {
     display: block
 }
 
-@font-face {
-    font-family: 'SeroScWebPro-Medium';
-    src: url("fonts/SeroScWebPro-Medium.eot")
-}
-
-@font-face {
-    font-family: 'SeroScWebPro-Medium';
-    src: url("fonts/SeroScWebPro-Medium.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'SeroWebPro-Medium';
-    src: url("fonts/SeroWebPro-Medium.eot")
-}
-
-@font-face {
-    font-family: 'SeroWebPro-Medium';
-    src: url("fonts/SeroWebPro-Medium.woff") format("woff")
-}
 
 html {
     font-size: 100%;
@@ -37,10 +18,10 @@ html {
 }
 
 body, input, button, textarea {
-    font-family: Georgia, Serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-size: 14px;
     font-size: 1.4rem;
-    color: #333
+    color: #fff
 }
 
 body, p, li {
@@ -48,23 +29,23 @@ body, p, li {
 }
 
 body {
-    background: #f3f4f6 url(img/bg.png) top center
+    background: rgb(77,77,77);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    color: #969696
+    color: #ffffff;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-    color: #007b99
+    color: #ffffff;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    color: #005266
+    color: rgb(200,200,200)
 }
 
 h1 {
@@ -124,15 +105,16 @@ h3, h4, h5, h6 {
 }
 
 .svg .svg-replacement {
-    display: none
+/*    display: none */
 }
 
 a {
-    color: #333
+    color: #fff;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #007b99
+    color: rgb(200,200,200);
 }
 
 p, table, form {
@@ -222,9 +204,11 @@ textarea {
 }
 
 .header {
-    border-bottom: 1px solid #b2b2b2;
-    margin: 0 0 20px;
-    padding: 10px 0 20px
+    border-bottom: 3px solid rgb(0,146,69);
+    margin: 0;
+    padding: 10px 0 0px;
+    color: #fff;
+    background-color: #fff
 }
 
 .header .logo {
@@ -241,7 +225,7 @@ textarea {
 }
 
 .nav {
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
@@ -259,18 +243,23 @@ textarea {
 
 .nav a {
     text-decoration: none;
-    padding: 0 0 2px 2px
+    padding: 0 0 2px 2px;
+    color: rgb(0,146,69);
+}
+
+.nav a:hover {
+  color: #000
 }
 
 .nav .on a {
-    color: #007b99;
-    border-bottom: 2px solid #007b99
+    color: rgb(0,146,69);
+    border-bottom: 2px solid rgb(0,146,69)
 }
 
 .mobile-nav {
     display: none;
     clear: both;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 16px
@@ -291,8 +280,8 @@ textarea {
 }
 
 .mobile-nav .current .label a {
-    color: #007b99;
-    border-bottom: 2px solid #007b99
+    color: rgb(0,146,69);
+    border-bottom: 2px solid rgb(0,146,69)
 }
 
 .mobile-nav .current .toggle {
@@ -303,7 +292,8 @@ textarea {
 
 .mobile-nav .list a {
     display: block;
-    margin: 8px 0
+    margin: 8px 0;
+    color: rgb(0,146,69);
 }
 
 .top {
@@ -348,7 +338,7 @@ textarea {
 
 .main-wrap {
     position: relative;
-    background-color: #fff
+    background-color: rgb(102,102,102)
 }
 
 .main {
@@ -362,7 +352,7 @@ textarea {
 }
 
 .main h1 {
-    color: #007b99
+    color: #fff
 }
 
 .sidebar {
@@ -382,7 +372,7 @@ textarea {
     right: 0;
     width: 35.9%;
     height: 100%;
-    background-color: #ededec
+    background-color: rgb(128,128,128)
 }
 
 .entry-title {
@@ -420,7 +410,7 @@ textarea {
 
 .home-news li span {
     font-size: 11px;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696;
@@ -438,7 +428,7 @@ textarea {
 }
 
 .home-featured-project .summary h3 a {
-    color: #007b99
+    color: #ffffff
 }
 
 .home-featured-project .summary h3 a:hover {
@@ -491,7 +481,7 @@ textarea {
 
 .project-info li b {
     display: block;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696
@@ -508,9 +498,8 @@ textarea {
 
 .main .project-title {
     font-size: 20px;
-    color: #969696;
+    color: #ffffff;
     margin: 0 0 8px;
-    color: #969696
 }
 
 .entry-image {
@@ -539,7 +528,7 @@ textarea {
 
 .summary .date {
     margin: -5px 0 10px;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696;
@@ -569,12 +558,12 @@ textarea {
 }
 
 .cat-entry-list .on a {
-    color: #007b99
+    color: #ffffff
 }
 
 .cat-entry-list .date {
     font-size: 11px;
-    font-family: 'SeroWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     color: #969696;
@@ -603,7 +592,12 @@ textarea {
 }
 
 .social svg:hover .grey {
-    fill: #007b99
+    fill: #ffffff
+}
+
+.social .svg-replacement
+{
+display: none
 }
 
 .social img {
@@ -611,7 +605,7 @@ textarea {
 }
 
 .social p {
-    font-family: 'SeroScWebPro-Medium', sans-serif;
+    font-family: "franklin-gothic-urw", sans-serif;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     font-size: 10px;
